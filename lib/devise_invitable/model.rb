@@ -73,6 +73,11 @@ module Devise
             self.invitation_token = nil
             self.invitation_accepted_at = Time.now.utc if respond_to? :"invitation_accepted_at="
             self.completing_invite = false
+            if self.invited_by.role == "teacher"
+              self.role = "student"
+              self.approved = true
+              self.parent_id = self.invited_by_id
+            end
             self.save(:validate => false)
           end
         end
