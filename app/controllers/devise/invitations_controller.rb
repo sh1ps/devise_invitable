@@ -16,6 +16,7 @@ class Devise::InvitationsController < DeviseController
     self.resource = resource_class.invite!(params[resource_name], current_inviter)
 
     if resource.errors.empty?
+      self.resource.role = "student"
       set_flash_message :notice, :send_instructions, :email => self.resource.email
       respond_with resource, :location => after_invite_path_for(resource)
     else

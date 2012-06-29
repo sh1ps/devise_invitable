@@ -1,3 +1,6 @@
+= Note
+This fork is very specific to my needs. It's pretty safe to assume this isn't going to work in your project unless you go over the code pretty carefully. Long story short, there's a 99% chance you don't want this.
+
 = DeviseInvitable
 {<img src="http://travis-ci.org/scambra/devise_invitable.png"/>}[http://travis-ci.org/scambra/devise_invitable]
 
